@@ -227,6 +227,7 @@ body div.line[type*=action] {
 
 body div[type*="action"] .message {
 	color: #000;
+	font-weight: bold;
 }
 
 body div[type*=action] .sender {
