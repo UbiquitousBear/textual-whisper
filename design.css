@@ -73,8 +73,8 @@ body[dir=ltr] .time {
 	text-shadow: #fff 0px 1px;
 	font-weight: bold;
 	margin-right: -30px;
-	font-style: bold;
 	line-height: 22px;
+	font-style: normal;
 }
 
 
