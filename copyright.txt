@@ -1,3 +1,1 @@
-This style is a modified and stripped down version of 
-the "Simplified" theme developed by "Cowboy" Ben Alman
-(http://benalman.com/). Copyright © 2010, 2011, 2012.
+This style is based off Linkinus 2’s Whisper. Credits go to Nicholas Penree (Conceited Software) and Jannis Leidel (for the original LimeChat) themes. 

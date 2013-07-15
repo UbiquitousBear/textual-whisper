@@ -113,22 +113,22 @@ a:hover {
 	opacity: 0; /* Set by JavaScript */
 	z-index: 400;
 	position: fixed;
-	
+
 	color: #000;
 	text-shadow: #e3e3e3 0px 1px;
 	background-color: #bcbcbc;
 	background: -webkit-gradient(linear, left top, left bottom, from(#d1d1d1), to(#bcbcbc));
-	
+
 	font-weight: bold;
 	text-align: center;
 	line-height: 28px;
-	
+
 	padding: 0 6px 0 6px;
 	border-bottom: solid 1px #a3a3a3;
-	
+
 	-webkit-transition: opacity 0.8s linear;
 	-webkit-box-shadow: #888 0 2px 2px;
-	
+
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
@@ -150,8 +150,9 @@ a:hover {
 
 body a img {
 	border-left: 143px solid #eee;
-	margin-left:-40px;
+	margin-left:-148px;
 	padding-left: 5px;
+	padding-bottom: 5px;
 }
 
 body img {
@@ -255,9 +256,12 @@ body div[type*=action] .sender {
 	display:inline-block;
 }
 
-body div[type*=action] p[type*=myself] .sender,
+body div[type*=action] p[type*=myself] .sender {
+	color: #7ae;
+}
+
 body div[type*=action] p[type*=myself] .message {
-	color: #B52CF6;
+	color: #000;
 }
 
 body[dir=ltr] div[type*=action] .sender:before {
