@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>Nickname Format</key>
-	<string></string>
+	<string>%@%n</string>
 	<key>Timestamp Format</key>
 	<string></string>
 	<key>Override Channel Font</key>
