@@ -76,7 +76,7 @@ body[dir=ltr] .time {
 	-webkit-user-select: none;
 	text-shadow: #fff 0px 1px;
 	font-weight: bold;
-	margin-right: 5px;
+	margin-right: 10px;
 	line-height: 22px;
 	font-style: normal;
 	text-align: right;
