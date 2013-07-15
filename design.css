@@ -150,8 +150,9 @@ a:hover {
 
 body a img {
 	border-left: 143px solid #eee;
-	margin-left:-40px;
+	margin-left:-148px;
 	padding-left: 5px;
+	padding-bottom: 5px;
 }
 
 body img {
