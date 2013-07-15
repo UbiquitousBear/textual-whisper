@@ -35,12 +35,16 @@ body[type=channel] div#body_home {
 }
 
 body .line {
-
  	border-bottom:1px solid #efefef;
 }
 
 body[dir=rtl] .sender {
 	display: inline-block;
+}
+
+/* Hide some internal stuff. */
+#timestampWidth {
+	display: none;
 }
 
 /* Loading Screen */
@@ -72,9 +76,10 @@ body[dir=ltr] .time {
 	-webkit-user-select: none;
 	text-shadow: #fff 0px 1px;
 	font-weight: bold;
-	margin-right: -30px;
+	margin-right: 5px;
 	line-height: 22px;
 	font-style: normal;
+	text-align: right;
 }
 
 
