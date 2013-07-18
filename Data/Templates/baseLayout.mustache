@@ -24,13 +24,13 @@
 				font-size: {{userConfiguredFontSize}}pt;
 			}
 			
-			/* Begin style specific settings. */
+			/* Begin style specific settings. 
 			
 			body div.line.text p {
 				margin-left: 145;
 				text-indent: -145;
 			}
-			
+			*/
 			body div.line.text .message {
 				padding-right: {{predefinedTimestampWidth}}px;
 			}
@@ -101,7 +101,7 @@
 			{{! The elements "body_home," "loading_screen," "topic_bar," and "mark" must always 
 			remain the same as the ID value of these elements are used internally by Textual. }}
 
-			<div id="loading_screen">View is Loading…</div>
+			<div id="loading_screen">Whisper for Textual</div>
 			<div id="body_home">{{! Filled at runtime. }}</div>
 		
 			{{#isChannelView}}

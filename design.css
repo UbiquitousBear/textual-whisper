@@ -229,6 +229,10 @@ body div[type*=privmsg] .sender {
 	text-align:right;
 	display:inline-block;
 	overflow: auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
 }
 
 /* ACTION */
@@ -246,6 +250,10 @@ body div[type*="action"] .message {
 }
 
 body div[type*=action] .sender {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
 	font-weight: 700;
 	width:134px;
 	text-shadow: #fff 0px 1px; 
@@ -254,6 +262,8 @@ body div[type*=action] .sender {
 	padding-right:5px;
 	text-align:right;
 	display:inline-block;
+	overflow: auto;
+	height: 100%;
 }
 
 body div[type*=action] p[type*=myself] .sender {
@@ -334,6 +344,8 @@ body div.line[command="722"] .message {
 /* GENERAL EVENT */
 
 body span.message{
+	position: relative;
+	padding-left: 145px;
 	display:table-cell;
 	vertical-align: middle;
 	min-height: 22px;
@@ -354,6 +366,7 @@ body div.event span.message {
 	min-height: 19px;
 	line-height: 19px;
 	text-shadow: #fff 0px 1px;
+	padding-left: 0;
 }
 
 body div.line[type*=join],
