@@ -1,7 +1,7 @@
 Whisper for Textual
 =================================
 
-Textual for the [Textual IRC client](http://www.codeux.com/textual/).
+Whisper for the [Textual IRC client](http://www.codeux.com/textual/).
 
 Developed by Shamil Nunhuck, based on Nicholas Penree's work.
 
@@ -27,6 +27,6 @@ Installation
 
 1.  Clone the repo to the Textual styles folder
 
-	$ git clone https://github.com/shamil-nunhuck/textual-whisper.git "~/Library/Containers/com.codeux.irc.textual/Data/Library/Application Support/Textual IRC/Styles/"
+	$ git clone https://github.com/shamil-nunhuck/textual-whisper.git "~/Library/Containers/com.codeux.irc.textual/Data/Library/Application Support/Textual IRC/Styles/Whisper"
 
 2.  Choose the style from Textual's Preferences -> Style -> Style Dropdown
