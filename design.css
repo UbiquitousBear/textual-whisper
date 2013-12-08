@@ -15,10 +15,10 @@ body {
 	overflow: hidden;
 	overflow-y: visible;
 	background-color: #fff;
-	font-family: "Lucida Grande";
+	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 
-body div#body_home {
+#body_home {
 	left: 0;
 	right: 0;
 	bottom: 0;
@@ -30,7 +30,7 @@ body div#body_home {
 	-webkit-transition: opacity 0.8s linear;
 }
 
-body[type=channel] div#body_home {
+#body_home {
 	max-height: 96.5%;
 }
 
@@ -49,7 +49,7 @@ body[dir=rtl] .sender {
 
 /* Loading Screen */
 
-body div#loading_screen {
+#loading_screen {
 	position:absolute; 
 	top: 50%;
 	left: 50%;
@@ -143,14 +143,12 @@ a:hover {
 }
 
 #topic_bar a, 
-#topic_bar span.channel {
+#topic_bar .channel {
 }
 
 /* Images */
 
 body a img {
-	border-left: 143px solid #eee;
-	margin-left:-148px;
 	padding-left: 5px;
 	padding-bottom: 5px;
 }
@@ -346,15 +344,15 @@ body div.line[command="722"] .message {
 
 body span.message{
 	position: relative;
-	padding-left: 145px;
+	padding-left: 150px;
 	display:table-cell;
 	vertical-align: middle;
 	min-height: 22px;
 	line-height: 22px;
-	width:80%;
+	width: calc(100% - 250px);
 }
 
-body div.event + div..event {
+body div.event + div.event {
 	border-top: #fff 1px solid;
 }
 
@@ -379,7 +377,7 @@ body div.line[ltype*=nick],
 body div.line[ltype*=mode],
 body div.line[ltype*=topic],
 body div.line[ltype*=website] {
-	padding-left: 1%;
+	padding-left: 5px;
 	background-color: #DEE6F2;
 	font-weight: bold;
 	min-height: 19px;
