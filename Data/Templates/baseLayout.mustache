@@ -1,4 +1,4 @@
-<html type="{{viewTypeToken}}" 
+<html ltype="{{viewTypeToken}}" type="{{viewTypeToken}}"
 
 		{{#isChannelView}}
 			channelname="{{channelName}}" 
@@ -34,12 +34,12 @@
 			body div.line.text .message {
 				padding-right: {{predefinedTimestampWidth}}px;
 			}
-
+			
 			/* End style specific settings. */
 
 			{{!
 				The following CSS definitions exist for the internal use of Textual.
-				If you are a style developer reading this and plan on using custom
+				If you are a style developer reading this and plan on using custom 
 				templates, then DO NOT modify these. You can touch anything else you
 				want, but we are trying to have some consistency between styles. 
 			}}
@@ -87,8 +87,8 @@
 		</style>
 	</head>
 	
-	<body type="{{viewTypeToken}}" 
-
+	<body ltype="{{viewTypeToken}}" type="{{viewTypeToken}}"
+	
 		{{#isChannelView}}
 			channelname="{{channelName}}" 
 		{{/isChannelView}}
@@ -100,8 +100,8 @@
 		dir="{{textDirectionToken}}">
 			{{! The elements "body_home," "loading_screen," "topic_bar," and "mark" must always 
 			remain the same as the ID value of these elements are used internally by Textual. }}
-
-			<div id="loading_screen">Whisper for Textual</div>
+			
+			<div id="loading_screen">View is Loading…</div>
 			<div id="body_home">{{! Filled at runtime. }}</div>
 		
 			{{#isChannelView}}
