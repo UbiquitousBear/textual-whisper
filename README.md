@@ -5,6 +5,8 @@ Whisper for the [Textual IRC client](http://www.codeux.com/textual/).
 
 Developed by Shamil Nunhuck, based on Nicholas Penree's work.
 
+__This style is compatible Textual 4.0 and above__
+
 ![Screenshot](http://f.cl.ly/items/2w1Z2P0G1C0M1a38050E/Screen%20Shot%202013-07-19%20at%2000.01.49.png)
 
 
