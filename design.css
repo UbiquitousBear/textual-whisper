@@ -212,7 +212,7 @@ body div[ltype*="privmsg"] .message {
 	color: #000;
 }
 
-body div[ltype*=privmsg] p[ltype*=myself] .message {
+body div[ltype*=privmsg] p[ltype*=myself] .message,
 body div[ltype*=privmsg][mtype*=myself] .message {
 	color: #000;
 }
