@@ -179,6 +179,10 @@ div[id=mark] {
 
 /* NOTICE/CTCP/WALLOPS */
 
+body div.line{
+	word-break: break-all;
+}
+
 body div.line[ltype*=ctcp],
 body div.line[ltype*=notice],
 body div.line[ltype*=wallops] {
