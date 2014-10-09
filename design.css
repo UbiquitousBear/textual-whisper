@@ -357,6 +357,7 @@ body span.message{
 	min-height: 22px;
 	line-height: 22px;
 	width: calc(100% - 250px);
+	word-break: normal;
 }
 
 body div.event + div.event {
