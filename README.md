@@ -32,3 +32,12 @@ Installation
 	$ git clone https://github.com/shamil-nunhuck/textual-whisper.git "~/Library/Containers/com.codeux.irc.textual/Data/Library/Application Support/Textual IRC/Styles/Whisper"
 
 2.  Choose the style from Textual's Preferences -> Style -> Style Dropdown
+
+
+Installation
+------------
+
+Credits to:
+
+[joostrijneveld] (https://github.com/joostrijneveld)
+[paradox460] (https://github.com/paradox460)
