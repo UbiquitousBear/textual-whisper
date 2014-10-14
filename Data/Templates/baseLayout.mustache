@@ -1,14 +1,17 @@
-<html ltype="{{viewTypeToken}}" type="{{viewTypeToken}}"
+<html viewtype="{{viewTypeToken}}"
 
-		{{#isChannelView}}
-			channelname="{{channelName}}" 
-		{{/isChannelView}}
-        
-		{{#isPrivateMessageView}}
-			channelname="{{channelName}}" 
-		{{/isPrivateMessageView}}
-		
-		dir="{{textDirectionToken}}">
+{{#isChannelView}}
+	channelname="{{channelName}}" 
+{{/isChannelView}}
+
+{{#isPrivateMessageView}}
+	channelname="{{channelName}}"
+{{/isPrivateMessageView}}
+
+{{! The operating system version declaration allows CSS selectors to target specific versions. }}
+systemversion="{{operatingSystemVersion}}"
+
+dir="{{textDirectionToken}}">
 		
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset={{userConfiguredTextEncoding}}">
