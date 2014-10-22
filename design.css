@@ -178,6 +178,12 @@ div[id=mark] {
 	opacity: 0.6;
 }
 
+span.sender{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
 /* NOTICE/CTCP/WALLOPS */
 
 body div.line{
@@ -633,12 +639,10 @@ body .inline_nickname[colornumber='30'] {
 	display: block;
 	margin-top: 15px;
 	margin-bottom: 12px;
-	float:left;
 }
 
 .inlineImageCell .image {
 	display: inline-block;
-	float: right;
 	margin-right: 12px;
 	margin-left: 10px;
 	min-width: 40px;
@@ -653,12 +657,12 @@ body .inline_nickname[colornumber='30'] {
 	font-size: 16px;
 	width: 20px;
 	height: 20px;
-	float: right;
 	text-indent: 5px;
 	font-weight: 900;
 	background-color:#bcbcbc;
 	background:-webkit-gradient(linear, left top, left bottom, from(#d1d1d1), to(#bcbcbc));
 	padding-top:1px;
+	float:left;
 
 }
 
