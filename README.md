@@ -13,7 +13,7 @@ __This style is compatible Textual 5.0 and above__
 Installation
 ------------
 
-* Open "Textual Preferences" (CMD + M)
+* Open "Textual Preferences" (⌘ + ,)
 * Expand "Addons"
 * Choose "Installed Addons"
 * Click on "Open In Finder"
