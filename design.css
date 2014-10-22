@@ -77,7 +77,7 @@ body[dir=ltr] .time {
 	text-shadow: #fff 0px 1px;
 	font-weight: bold;
 	margin-right: 10px;
-	line-height: 22px;
+	line-height: 30px;
 	font-style: normal;
 	text-align: right;
 }
@@ -122,6 +122,7 @@ a:hover {
 	font-weight: bold;
 	text-align: center;
 	line-height: 28px;
+	font-size: 11px;
 
 	padding: 0 6px 0 6px;
 	border-bottom: solid 1px #a3a3a3;
@@ -212,6 +213,12 @@ body div.line[ltype*=action][highlight=true] {
 	background-color: #ffc !important;
 }
 
+body div.line[ltype*=action][highlight=true] span.sender {
+	font-weight: normal;
+	background-color: #ffc !important;
+	font-weight:700;
+}
+
 body div[ltype*="privmsg"] .message {
 	color: #000;
 }
@@ -226,7 +233,7 @@ body div[ltype*=privmsg] .sender {
 	width:134px;
 	text-shadow: #fff 0px 1px; 
 	background-color: #eee;
-	min-height:22px;
+	min-height:30px;
 	border-right: 1px solid #dcdcdc;
 	padding-right:5px;
 	text-align:right;
@@ -262,7 +269,7 @@ body div[ltype*=action] .sender {
 	width:134px;
 	text-shadow: #fff 0px 1px; 
 	background-color: #eee;
-	height:22px;
+	height:30px;
 	padding-right:5px;
 	text-align:right;
 	display:inline-block;
@@ -354,8 +361,8 @@ body span.message{
 	padding-left: 150px;
 	display:table-cell;
 	vertical-align: middle;
-	min-height: 22px;
-	line-height: 22px;
+	min-height: 30px;
+	line-height: 30px;
 	width: calc(100% - 250px);
 	word-break: normal;
 }
@@ -366,12 +373,12 @@ body div.event + div.event {
 
 body div.event span.time {
 	color: #a6b9c0;
-	line-height: 19px;
+	line-height: 25px;
 }
 
 body div.event span.message {
-	min-height: 19px;
-	line-height: 19px;
+	min-height: 25px;
+	line-height: 25px;
 	text-shadow: #fff 0px 1px;
 	padding-left: 0;
 }
@@ -385,7 +392,7 @@ body div.line[ltype*=nick],
 body div.line[ltype*=mode],
 body div.line[ltype*=topic],
 body div.line[ltype*=website] {
-	padding-left: 5px;
+	padding-left: 10px;
 	background-color: #DEE6F2;
 	font-weight: bold;
 	min-height: 19px;
@@ -427,7 +434,6 @@ body div.event span.message[ltype*=mode]{
 /* Nickname Colors */
 
 body .inline_nickname {
-	font-weight: 700;
 	color: #000;
 }
 
@@ -627,11 +633,12 @@ body .inline_nickname[colornumber='30'] {
 	display: block;
 	margin-top: 15px;
 	margin-bottom: 12px;
+	float:left;
 }
 
 .inlineImageCell .image {
 	display: inline-block;
-	float: left;
+	float: right;
 	margin-right: 12px;
 	margin-left: 10px;
 	min-width: 40px;
@@ -641,18 +648,18 @@ body .inline_nickname[colornumber='30'] {
 .inlineImageCell .closeButton {
 	cursor: pointer;
 	border-radius: 5px;
-	border: 2px solid #a1a1a1;
-	color: #a1a1a1;
-	display: inline-block;
+	color: #fff;
 	line-height: 14px;
-	font-size: 15px;
-	font-family: "Helvetica Neue" !important;
-	text-indent: 7px;
-	width: 16px;
-	height: 16px;
-	float: left;
-	padding-right: 7px;
-	padding-left: 0px;
+	font-size: 16px;
+	width: 20px;
+	height: 20px;
+	float: right;
+	text-indent: 5px;
+	font-weight: 900;
+	background-color:#bcbcbc;
+	background:-webkit-gradient(linear, left top, left bottom, from(#d1d1d1), to(#bcbcbc));
+	padding-top:1px;
+
 }
 
 html[systemversion^="10.9"] .inlineImageCell .closeButton,
