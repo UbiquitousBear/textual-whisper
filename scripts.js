@@ -57,6 +57,22 @@ Whisper = {
 			line.classList.add('coalesced');
 			sender.innerHTML = '';
 		}
+	},
+	
+	enableEmoticonIfSet : function(lineNum){
+		var line = Whisper.getLine(lineNum);
+		var innerMessage = Whisper.getInnerMessage(line);
+		
+		if (innerMessage){
+			var text = innerMessage.innerHTML; 
+			if (text.indexOf("!whisper emoticons on") > -1){
+				app.styleSettingsSetValue("enableEmoticon", true);
+			}
+			
+			if (text.indexOf("!whisper emoticons off") > -1){
+				app.styleSettingsSetValue("enableEmoticon", false);
+			}
+		}
 	}
 };
 
@@ -132,6 +148,10 @@ Emoticons = {
 			innerMessage.innerHTML = textWithEmoticon;	
 		}
 		
+	},
+	
+	isEnabled : function() {
+		return app.styleSettingsRetrieveValue("enableEmoticon");
 	}
 	
 }
@@ -152,5 +172,8 @@ Textual.viewFinishedReload = function()
 
 Textual.newMessagePostedToView = function (lineNum) {
 	Whisper.coalesceLines(lineNum);
-	Emoticons.replaceTextWithEmoticons(lineNum)
+	Whisper.enableEmoticonIfSet(lineNum);
+	if(Emoticons.isEnabled()) {
+		Emoticons.replaceTextWithEmoticons(lineNum);
+	}
 };
