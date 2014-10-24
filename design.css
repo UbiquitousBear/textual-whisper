@@ -441,6 +441,12 @@ body div.event span.message[ltype*=mode]{
 
 body .inline_nickname {
 	color: #000;
+	display: inline-block;
+	line-height: 1;
+	padding: 4px 2px;
+	background: hsl(0,0%,96%);
+	border: 1px solid hsl(0,0%,90%);
+	border-radius: 3px;
 }
 
 body div[ltype*=privmsg] .sender[ltype*=myself],
