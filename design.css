@@ -451,6 +451,12 @@ body div.event span.message[ltype*=mode]{
 
 body .inline_nickname {
 	color: #000;
+	display: inline-block;
+	line-height: 1;
+	padding: 4px 2px;
+	background: hsl(0,0%,96%);
+	border: 1px solid hsl(0,0%,90%);
+	border-radius: 3px;
 }
 
 body div[ltype*=privmsg] .sender[ltype*=myself],
@@ -645,7 +651,7 @@ body .inline_nickname[colornumber='30'] {
 }
 
 .inlineImageCell {
-	overflow: auto;
+	overflow: hidden;
 	display: block;
 	margin-top: 15px;
 	margin-bottom: 12px;
@@ -667,16 +673,16 @@ body .inline_nickname[colornumber='30'] {
 	cursor: pointer;
 	border-radius: 5px;
 	color: #fff;
-	line-height: 14px;
+	line-height: 13px;
 	font-size: 20px;
 	width: 20px;
-	height: 15px;
-	text-indent: 4.5px;
+	height: 20px;
 	font-weight: 900;
 	background-color:#bcbcbc;
 	background:-webkit-gradient(linear, left top, left bottom, from(#d1d1d1), to(#bcbcbc));
 	padding-top:2px;
-	float:left;
+	float:right;
+	text-align: center;
 
 }
 
