@@ -38,6 +38,10 @@ body .line {
  	border-top:1px solid #efefef;
 }
 
+body .line.coalesced {
+	border-top: 0;
+}
+
 body[dir=rtl] .sender {
 	display: inline-block;
 }
@@ -227,6 +231,7 @@ body div.line[ltype*=action][highlight=true] span.sender {
 
 body div[ltype*="privmsg"] .message {
 	color: #000;
+	height:30px;
 }
 
 body div[ltype*=privmsg] p[ltype*=myself] .message,
@@ -237,9 +242,9 @@ body div[ltype*=privmsg][mtype*=myself] .message {
 body div[ltype*=privmsg] .sender {
 	font-weight: 700;
 	width:134px;
+	min-height:30px;
 	text-shadow: #fff 0px 1px;
 	background-color: #eee;
-	min-height:30px;
 	border-right: 1px solid #dcdcdc;
 	padding-right:5px;
 	text-align:right;
@@ -273,9 +278,9 @@ body div[ltype*=action] .sender {
 	left: 0;
 	font-weight: 700;
 	width:134px;
+	min-height:30px;
 	text-shadow: #fff 0px 1px;
 	background-color: #eee;
-	height:30px;
 	padding-right:5px;
 	text-align:right;
 	display:inline-block;
@@ -367,10 +372,15 @@ body span.message{
 	padding-left: 150px;
 	display:table-cell;
 	vertical-align: middle;
-	min-height: 30px;
+	min-height:30px;
 	line-height: 30px;
 	width: calc(100% - 250px);
 	word-break: normal;
+}
+
+body span.message img.emoticon {
+	padding-top: 4px;
+	display: inline;
 }
 
 body div.event + div.event {

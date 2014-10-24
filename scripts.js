@@ -1,6 +1,7 @@
 /* Defined in: "Textual.app -> Contents -> Resources -> JavaScript -> API -> core.js" */
 
 Whisper = {
+	
 	getLine: function(lineNum) {
 		return document.getElementById('line-' + lineNum);
 	},
@@ -8,6 +9,14 @@ Whisper = {
 	getSender: function(line) {
 		if (line) {
 			return line.querySelector('.sender');
+		} else {
+			return null;
+		}
+	},
+	
+	getInnerMessage : function(line) {
+		if (line) {
+			return line.querySelector('.innerMessage');
 		} else {
 			return null;
 		}
@@ -51,6 +60,82 @@ Whisper = {
 	}
 };
 
+Emoticons = {
+	
+	list : {
+		";)"        : "Wink.png",
+		"X)~"        : "Facial.png",
+		"&GT;:D"    : "Angry Face.png",
+		":)"        : "Smile.png",
+		"(:"        : "Smile.png",
+		":@"        : "Angry Face.png",
+		":["        : "Blush.png",
+		":S"        : "Undecided.png",
+		":&APOS;("  : "Crying.png",
+		":|"        : "Foot In Mouth.png",
+		":("        : "Frown.png",
+		":O"        : "Gasp.png",
+		":D"        : "Grin.png",
+		"D:"        : "Gasp.png",
+		" D:"        : "Gasp.png",
+		"O:)"       : "Halo.png",
+		"&LT;3"     : "Heart.png",
+		"8)"        : "Wearing Sunglasses.png",
+		":*"        : "Kiss.png",
+		":$"        : "Money-mouth.png",
+		":P"        : "Sticking Out Tongue.png",
+		":\\"       : "Undecided.png",
+		"(N)"       : "Thumbs Down.png",
+		"(Y)"       : "Thumbs Up.png",
+		"(NL)"      : "nl.png",
+		"(OKEANOS)" : "okeanos.png",
+		"(DRUDGE)"  : "drudge.png",
+		"(CALTSAR)" : "caltsar.png"
+	},
+	
+	replaceEmoticonFromText : function (text) {
+		
+		if (text.match(/color:/ig)) {
+			return text;
+		}
+		
+		text = text.replace(/(^D-?:)|\s(D-?:)|(X-?\)~|&gt;:d|;-?\)|:-?\)|\(-?:|(:-?@)|:-?\[|:-?s|:&apos;-?\(|:-?\||:-?\(|:-?o|:-?D|o:-?\)|&lt;3|8-?\)|:-?\*|:-?&apos;\(|(:-?\$|:-?p|:-?\\|\(N\)|\(Y\)|\(NL\)|\(OKEANOS\)|\(DRUDGE\)|\(CALTSAR\)))/ig, function(emote){ return Emoticons.imageForEmoticon(emote) } );
+		
+		return text;
+	},
+	
+	
+	
+	imageForEmoticon : function (emote){
+		window.console.log('emote = "' + emote + '"');
+		var result = emote;
+		var imageName = Emoticons.list[emote.replace('-', '').toUpperCase()];
+	
+		if (imageName == null) return emote;
+	
+		switch(emote){
+			case ' D:':
+				result = '&nbsp;<img src="img/emoticons/' + imageName + '" class="emoticon" alt="'+emote+'" onclick="removeEmoticon(this, \'' + emote.replace('&apos;', 'WHISPERAPOS') + '\');" />';
+			default:
+				result = '<img src="img/emoticons/' + imageName + '" class="emoticon" alt="'+emote+'" onclick="removeEmoticon(this, \'' + emote.replace('&apos;', 'WHISPERAPOS') + '\');" />';
+		}
+	
+		return result;
+	},
+	
+	replaceTextWithEmoticons : function (lineNum) {
+		var line = Whisper.getLine(lineNum);
+		var innerMessage = Whisper.getInnerMessage(line);
+		
+		if (innerMessage){
+			var textWithEmoticon = Emoticons.replaceEmoticonFromText(innerMessage.innerHTML);
+			innerMessage.innerHTML = textWithEmoticon;	
+		}
+		
+	}
+	
+}
+
 Textual.viewFinishedLoading = function()
 {
 	Textual.fadeInLoadingScreen(1.00, 0.95);
@@ -67,4 +152,5 @@ Textual.viewFinishedReload = function()
 
 Textual.newMessagePostedToView = function (lineNum) {
 	Whisper.coalesceLines(lineNum);
+	Emoticons.replaceTextWithEmoticons(lineNum)
 };
