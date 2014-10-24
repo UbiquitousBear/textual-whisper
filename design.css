@@ -641,7 +641,7 @@ body .inline_nickname[colornumber='30'] {
 }
 
 .inlineImageCell {
-	overflow: auto;
+	overflow: hidden;
 	display: block;
 	margin-top: 15px;
 	margin-bottom: 12px;
