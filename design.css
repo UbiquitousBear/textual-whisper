@@ -244,7 +244,7 @@ body div[ltype*=privmsg] .sender {
 	padding-right:5px;
 	text-align:right;
 	display:inline-block;
-	overflow: auto;
+	overflow: hidden;
 	position: absolute;
 	top: 0;
 	bottom: 0;
