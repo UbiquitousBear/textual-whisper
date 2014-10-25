@@ -457,6 +457,7 @@ body .inline_nickname {
 	background: hsl(0,0%,96%);
 	border: 1px solid hsl(0,0%,90%);
 	border-radius: 3px;
+	margin: 4px 0;
 }
 
 body div[ltype*=privmsg] .sender[ltype*=myself],
@@ -652,7 +653,7 @@ body .inline_nickname[colornumber='30'] {
 
 .inlineImageCell {
 	overflow: hidden;
-	display: block;
+	display: -webkit-flex;
 	margin-top: 15px;
 	margin-bottom: 12px;
 }
@@ -667,6 +668,7 @@ body .inline_nickname[colornumber='30'] {
 	background:-webkit-gradient(linear, left top, left bottom, from(#d1d1d1), to(#bcbcbc));
 	padding:10px;
 	border-radius: 5px;
+	-webkit-order: 1;
 }
 
 .inlineImageCell .closeButton {
@@ -681,8 +683,8 @@ body .inline_nickname[colornumber='30'] {
 	background-color:#bcbcbc;
 	background:-webkit-gradient(linear, left top, left bottom, from(#d1d1d1), to(#bcbcbc));
 	padding-top:2px;
-	float:right;
 	text-align: center;
+	-webkit-order: 2;
 
 }
 
