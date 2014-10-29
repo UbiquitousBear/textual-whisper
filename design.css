@@ -369,7 +369,7 @@ body span.message{
 	vertical-align: middle;
 	min-height: 30px;
 	line-height: 30px;
-	width: calc(100% - 250px);
+	width: 100%;
 	word-break: normal;
 }
 
