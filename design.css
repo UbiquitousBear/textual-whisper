@@ -38,6 +38,10 @@ body .line {
  	border-top:1px solid #efefef;
 }
 
+body .line.coalesced {
+	border-top: 0;
+}
+
 body[dir=rtl] .sender {
 	display: inline-block;
 }
@@ -227,6 +231,7 @@ body div.line[ltype*=action][highlight=true] span.sender {
 
 body div[ltype*="privmsg"] .message {
 	color: #000;
+	height:30px;
 }
 
 body div[ltype*=privmsg] p[ltype*=myself] .message,
@@ -237,14 +242,14 @@ body div[ltype*=privmsg][mtype*=myself] .message {
 body div[ltype*=privmsg] .sender {
 	font-weight: 700;
 	width:134px;
+	min-height:30px;
 	text-shadow: #fff 0px 1px;
 	background-color: #eee;
-	min-height:30px;
 	border-right: 1px solid #dcdcdc;
 	padding-right:5px;
 	text-align:right;
 	display:inline-block;
-	overflow: hidden;
+	overflow: auto;
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -273,9 +278,9 @@ body div[ltype*=action] .sender {
 	left: 0;
 	font-weight: 700;
 	width:134px;
+	min-height:30px;
 	text-shadow: #fff 0px 1px;
 	background-color: #eee;
-	height:30px;
 	padding-right:5px;
 	text-align:right;
 	display:inline-block;
@@ -367,10 +372,15 @@ body span.message{
 	padding-left: 150px;
 	display:table-cell;
 	vertical-align: middle;
-	min-height: 30px;
+	min-height:30px;
 	line-height: 30px;
-	width: 100%;
+	width: calc(100% - 250px);
 	word-break: normal;
+}
+
+body span.message img.emoticon {
+	padding-top: 4px;
+	display: inline;
 }
 
 body div.event + div.event {
@@ -681,4 +691,46 @@ body .inline_nickname[colornumber='30'] {
 html[systemversion^="10.9"] .inlineImageCell .closeButton,
 html[systemversion^="10.8"] .inlineImageCell .closeButton {
 	line-height: 13px;
+}
+
+
+/* Selected User Messages */
+
+.sender {
+	cursor: pointer;
+}
+
+body div.line[ltype*=privmsg]:not(.selectedUser),
+body div.line[ltype*=action]:not(.selectedUser) {
+	transition-property: border-top, border-bottom, background-color;
+	transition-duration: 0.5s, 0.5s, 0.5s;
+}
+
+body div.line[ltype*=privmsg] .time:not(.selectedUser),
+body div.line[ltype*=action] .time:not(.selectedUser) {
+	transition: color 0.5s;
+}
+
+body div.line.selectedUser[highlight=false] .time {
+	transition: color 0.5s ease-in;
+	color: #000;
+}
+
+body div.line.selectedUser[highlight=false] {
+	transition-property: border-top, border-bottom, background-color;
+	transition-duration: 0.5s, 0.5s, 0.5s;
+
+  	z-index: 190;
+  	position: relative;
+  	background-color: #BDEFBC !important;
+}
+
+body div.line.selectedUser[highlight=false] .sender:before{
+	content: "★ ";
+	color: #3E8040;
+}
+
+
+body div.line.coalesced.selectedUser[highlight=false] .sender:before{
+	content: "";
 }

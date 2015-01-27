@@ -7,7 +7,7 @@ Developed by Shamil Nunhuck, based on Nicholas Penree's work.
 
 __This style is compatible Textual 5.0 and above__
 
-![Screenshot](http://f.cl.ly/items/0t283B3X0F0Z331m2G05/Screen%20Shot%202014-10-26%20at%2019.22.18.png)
+![Screenshot](http://f.cl.ly/items/2w1Z2P0G1C0M1a38050E/Screen%20Shot%202013-07-19%20at%2000.01.49.png)
 
 
 Installation
