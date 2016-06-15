@@ -398,7 +398,8 @@ body span.message{
 	min-height:30px;
 	line-height: 30px;
 	width: calc(100% - 250px);
-	word-break: normal;
+	word-break: break-word;
+	overflow-wrap: break-word;
 }
 
 body span.message img.emoticon {
