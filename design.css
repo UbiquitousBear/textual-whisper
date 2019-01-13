@@ -488,6 +488,7 @@ body div.date_indicator {
 	font-weight: bold;
 	min-height: 19px;
 	border-top: #fff 1px solid;
+	border-bottom: #fff 1px solid;
 	padding-top: 3px;
 	padding-bottom: 3px;
 }
